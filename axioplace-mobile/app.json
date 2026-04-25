@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "Axioplace",
+    "slug": "axioplace-mobile",
+    "scheme": "axioplace",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffcb30"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffcb30"
+      },
+      "package": "com.axioplace.mobile",
+      "usesCleartextTraffic": true,
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "axioplace"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.axioplace.mobile",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSAllowsLocalNetworking": true
+        },
+        "NSPhotoLibraryUsageDescription": "Axioplace a besoin d'accéder à vos photos pour publier des annonces.",
+        "NSCameraUsageDescription": "Axioplace a besoin d'utiliser votre caméra pour prendre des photos.",
+        "NSPhotoLibraryAddUsageDescription": "Axioplace a besoin d'accéder à votre galerie."
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Axioplace souhaite accéder à vos photos pour publier des annonces.",
+          "cameraPermission": "Axioplace souhaite utiliser votre caméra pour prendre des photos."
+        }
+      ],
+      "expo-web-browser"
+    ]
+  }
+}
